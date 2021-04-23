@@ -10,6 +10,12 @@ use Mix.Config
 config :nlw_05_elexir,
   ecto_repos: [Nlw05Elexir.Repo]
 
+config :nlw_05_elexir, Nlw05Elexir.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
+config :nlw_05_elexir, Nlw05Elexir.Mailer, adapter: Bamboo.LocalAdapter
+
 # Configures the endpoint
 config :nlw_05_elexir, Nlw05ElexirWeb.Endpoint,
   url: [host: "localhost"],

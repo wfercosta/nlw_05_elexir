@@ -17,6 +17,7 @@ defmodule Nlw05Elexir.Application do
       Nlw05ElexirWeb.Endpoint
       # Start a worker by calling: Nlw05Elexir.Worker.start_link(arg)
       # {Nlw05Elexir.Worker, arg}
+      # Nlw05Elexir.Supplies.ExpirationNotification
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

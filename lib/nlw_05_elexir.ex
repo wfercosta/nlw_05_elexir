@@ -1,9 +1,11 @@
 defmodule Nlw05Elexir do
-  @moduledoc """
-  Nlw05Elexir keeps the contexts that define your domain
-  and business logic.
 
-  Contexts are also responsible for managing your data, regardless
-  if it comes from the database, an external API or others.
-  """
+  alias Nlw05Elexir.Restaurants.Create, as: RestaurantCreate
+  alias Nlw05Elexir.Supplies.Create, as: SupplyCreate
+  alias Nlw05Elexir.Supplies.Get, as: GetSupply
+
+  defdelegate create_restaurant(params), to: RestaurantCreate, as: :call
+  defdelegate create_supply(params), to: SupplyCreate, as: :call
+
+  defdelegate get_supply(params), to: GetSupply, as: :call
 end
