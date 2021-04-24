@@ -1,4 +1,4 @@
-defmodule Nlw05Elexir.Repo.Migrations.CreateSuppliesTable do
+defmodule Nlw05Elixir.Repo.Migrations.CreateSuppliesTable do
   use Ecto.Migration
 
   def change do

@@ -1,7 +1,7 @@
 use Mix.Config
 
 # Configure your database
-config :nlw_05_elexir, Nlw05Elexir.Repo,
+config :nlw_05_elexir, Nlw05Elixir.Repo,
   username: "postgres",
   password: "postgres",
   database: "nlw_05_elexir_dev",
@@ -15,7 +15,7 @@ config :nlw_05_elexir, Nlw05Elexir.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :nlw_05_elexir, Nlw05ElexirWeb.Endpoint,
+config :nlw_05_elexir, Nlw05ElixirWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,

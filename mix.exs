@@ -1,4 +1,4 @@
-defmodule Nlw05Elexir.MixProject do
+defmodule Nlw05Elixir.MixProject do
   use Mix.Project
 
   def project do
@@ -19,7 +19,7 @@ defmodule Nlw05Elexir.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Nlw05Elexir.Application, []},
+      mod: {Nlw05Elixir.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

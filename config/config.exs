@@ -8,20 +8,20 @@
 use Mix.Config
 
 config :nlw_05_elexir,
-  ecto_repos: [Nlw05Elexir.Repo]
+  ecto_repos: [Nlw05Elixir.Repo]
 
-config :nlw_05_elexir, Nlw05Elexir.Repo,
+config :nlw_05_elexir, Nlw05Elixir.Repo,
   migration_primary_key: [type: :binary_id],
   migration_foreign_key: [type: :binary_id]
 
-config :nlw_05_elexir, Nlw05Elexir.Mailer, adapter: Bamboo.LocalAdapter
+config :nlw_05_elexir, Nlw05Elixir.Mailer, adapter: Bamboo.LocalAdapter
 
 # Configures the endpoint
-config :nlw_05_elexir, Nlw05ElexirWeb.Endpoint,
+config :nlw_05_elexir, Nlw05ElixirWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "Wji1+NkuWAuFA/HeavUMePLUgOXUZ4E5fiBjrKzX4Y7xSurdPTkiUTxIGVQERlok",
-  render_errors: [view: Nlw05ElexirWeb.ErrorView, accepts: ~w(json), layout: false],
-  pubsub_server: Nlw05Elexir.PubSub,
+  render_errors: [view: Nlw05ElixirWeb.ErrorView, accepts: ~w(json), layout: false],
+  pubsub_server: Nlw05Elixir.PubSub,
   live_view: [signing_salt: "3dX4cpgQ"]
 
 # Configures Elixir's Logger

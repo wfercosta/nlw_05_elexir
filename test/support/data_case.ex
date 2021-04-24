@@ -1,4 +1,4 @@
-defmodule Nlw05Elexir.DataCase do
+defmodule Nlw05Elixir.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -10,7 +10,7 @@ defmodule Nlw05Elexir.DataCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use Nlw05Elexir.DataCase, async: true`, although
+  by setting `use Nlw05Elixir.DataCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -18,20 +18,20 @@ defmodule Nlw05Elexir.DataCase do
 
   using do
     quote do
-      alias Nlw05Elexir.Repo
+      alias Nlw05Elixir.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import Nlw05Elexir.DataCase
+      import Nlw05Elixir.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Nlw05Elexir.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Nlw05Elixir.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Nlw05Elexir.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Nlw05Elixir.Repo, {:shared, self()})
     end
 
     :ok

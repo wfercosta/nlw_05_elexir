@@ -1,4 +1,4 @@
-defmodule Nlw05ElexirWeb.ConnCase do
+defmodule Nlw05ElixirWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule Nlw05ElexirWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use Nlw05ElexirWeb.ConnCase, async: true`, although
+  by setting `use Nlw05ElixirWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -22,20 +22,20 @@ defmodule Nlw05ElexirWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import Nlw05ElexirWeb.ConnCase
+      import Nlw05ElixirWeb.ConnCase
 
-      alias Nlw05ElexirWeb.Router.Helpers, as: Routes
+      alias Nlw05ElixirWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint Nlw05ElexirWeb.Endpoint
+      @endpoint Nlw05ElixirWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Nlw05Elexir.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Nlw05Elixir.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Nlw05Elexir.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Nlw05Elixir.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

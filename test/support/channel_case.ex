@@ -1,4 +1,4 @@
-defmodule Nlw05ElexirWeb.ChannelCase do
+defmodule Nlw05ElixirWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -11,7 +11,7 @@ defmodule Nlw05ElexirWeb.ChannelCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use Nlw05ElexirWeb.ChannelCase, async: true`, although
+  by setting `use Nlw05ElixirWeb.ChannelCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -21,18 +21,18 @@ defmodule Nlw05ElexirWeb.ChannelCase do
     quote do
       # Import conveniences for testing with channels
       import Phoenix.ChannelTest
-      import Nlw05ElexirWeb.ChannelCase
+      import Nlw05ElixirWeb.ChannelCase
 
       # The default endpoint for testing
-      @endpoint Nlw05ElexirWeb.Endpoint
+      @endpoint Nlw05ElixirWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Nlw05Elexir.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Nlw05Elixir.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Nlw05Elexir.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Nlw05Elixir.Repo, {:shared, self()})
     end
 
     :ok

@@ -1,4 +1,4 @@
-defmodule Nlw05Elexir.Repo.Migrations.CreateRestaurantsTable do
+defmodule Nlw05Elixir.Repo.Migrations.CreateRestaurantsTable do
   use Ecto.Migration
 
   def change do
